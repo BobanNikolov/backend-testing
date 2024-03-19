@@ -1,0 +1,33 @@
+spring:
+  flyway:
+    enabled: true
+    schemas: netcetera_testing
+  jpa:
+    database: default
+    open-in-view: false
+    generate-ddl: false
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+        show_sql: false
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: 'jdbc:postgresql://localhost:5433/netcetera?ApplicationName=netcetera-testing'
+    username: netcetera
+    password: netcetera
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 25
+      idle-timeout: 30000
+
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+    serialization:
+      write-dates-as-timestamps: false
+    default-property-inclusion: always
+server:
+  port: 8080

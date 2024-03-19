@@ -1,0 +1,9 @@
+services:
+  netcetera-db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: netcetera
+      POSTGRES_PASSWORD: netcetera
+      POSTGRES_DB: netcetera
+    ports:
+      - 5433:5432
