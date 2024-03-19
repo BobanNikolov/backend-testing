@@ -42,8 +42,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-properties-migrator")
 
-    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
-
     implementation("org.springframework:spring-webmvc")
     implementation("org.postgresql:postgresql")
 

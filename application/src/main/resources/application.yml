@@ -1,7 +1,7 @@
 spring:
   flyway:
     enabled: true
-    schemas: netcetera_testing
+    schemas: backend_testing
   jpa:
     database: default
     open-in-view: false
@@ -16,9 +16,9 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: 'jdbc:postgresql://localhost:5433/netcetera?ApplicationName=netcetera-testing'
-    username: netcetera
-    password: netcetera
+    url: 'jdbc:postgresql://localhost:5433/backend?ApplicationName=backend-testing'
+    username: backend
+    password: backend
     hikari:
       minimum-idle: 5
       maximum-pool-size: 25

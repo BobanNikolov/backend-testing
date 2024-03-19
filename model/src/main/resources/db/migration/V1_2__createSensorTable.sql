@@ -1,4 +1,4 @@
-create table netcetera_testing.sensor
+create table backend_testing.sensor
 (
     sensor_id   uuid primary key default gen_random_uuid(),
     position    varchar(256) not null,

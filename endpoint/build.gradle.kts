@@ -34,16 +34,12 @@ dependencies {
 
     implementation("org.hibernate.validator:hibernate-validator")
 
-    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
-
-    implementation("org.springframework.boot:spring-boot-starter-graphql")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springdoc:springdoc-openapi-starter-common:${project.properties["springdocVersion"]}")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "junit", module = "junit")
     }
-    testImplementation("org.springframework.graphql:spring-graphql-test")
 }
 
 // *********************************************************************************************************************

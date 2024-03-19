@@ -28,9 +28,6 @@ dependencies {
     implementation("jakarta.annotation:jakarta.annotation-api")
     implementation("org.springframework:spring-context-support")
     implementation("org.hibernate.validator:hibernate-validator")
-    implementation("org.springframework.boot:spring-boot-starter-graphql")
-
-    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 
     implementation("org.aspectj:aspectjweaver")
 
@@ -40,9 +37,6 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jdk8")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     implementation("com.fasterxml.jackson.module:jackson-module-parameter-names")
-
-    implementation("org.mapstruct:mapstruct:${project.properties["mapstructVersion"]}")
-    annotationProcessor("org.mapstruct:mapstruct-processor:${project.properties["mapstructVersion"]}")
 
     implementation("org.springdoc:springdoc-openapi-starter-common:${project.properties["springdocVersion"]}")
 
