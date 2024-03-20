@@ -9,6 +9,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +17,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
+
+import static jakarta.persistence.CascadeType.MERGE;
+import static jakarta.persistence.CascadeType.PERSIST;
 
 @Entity
 @NoArgsConstructor
@@ -42,4 +47,6 @@ public class Sensor {
   @Column(name = "status", nullable = false)
   @Enumerated(EnumType.STRING)
   private Status status;
+  @OneToMany(mappedBy = "sensor", cascade = {MERGE, PERSIST}, orphanRemoval = true)
+  private List<Measurement> measurements;
 }

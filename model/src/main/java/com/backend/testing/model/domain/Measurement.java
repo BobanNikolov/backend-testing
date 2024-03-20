@@ -9,7 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,7 +33,7 @@ public class Measurement {
   @Column(name = "measurement_id")
   private UUID measurementId;
 
-  @OneToOne
+  @ManyToOne
   @JoinColumn(name = "sensor_id")
   private Sensor sensor;
 
